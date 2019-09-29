@@ -1,30 +1,38 @@
-# AWS Lambda Net Core 2 by using CoreRT
+# Example C# .NET Core 3.0 Release and ReadyToRun with connect MySQL via Dapper Library
 
-Example for optimize cold start with Lambda Native
+## Preparing
 
-## Dependency
-
-- https://github.com/dotnet/corert
-- https://github.com/ifew/lambda-native/
-
-## Step to setup
-
-### Run Unit test
-
-```bash
-cd test/aws-lambda-lambdanative.Tests
-dotnet test
+1. Import Database from database.sql
+2. Add config database in your Environment Variable as "DB_CONNECTION" like this
+```
+DB_CONNECTION=Server=localhost;Port=3306;Uid=root;Pwd=1234;Database=lab;CharSet=utf8;ConvertZeroDateTime=True;
 ```
 
-### Build file and packing to output/package.zip
-
+## Command for run
 ```bash
-sh build.sh
+$ sh run.sh [Runtime]
 ```
 
-### Upload to aws s3
-
+Example for MacOS
 ```bash
-cd output
-aws s3 cp package.zip s3://backend-layer [--profile AWS-PROFILE-NAME]
+$ sh run.sh osx-64
 ```
+
+Example for Linux
+```bash
+$ sh run.sh linux-64
+```
+
+Example for Windows
+```bash
+$ sh run.sh win-64
+```
+
+## System Require for Linux
+
+- `sudo apt-get install clang-3.9`
+- `sudo apt-get install libunwind-dev`
+- `sudo apt-get install libcurl4-openssl-dev`
+- `sudo apt-get install zlib1g-dev`
+- `sudo apt-get install libkrb5-dev`
+- `export CppCompilerAndLinker=clang-3.9`
