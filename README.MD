@@ -1,4 +1,4 @@
-# Example C# .NET Core 3.0 Release and ReadyToRun with connect MySQL via Dapper Library
+# Example C# .NET Core 3.0.100 with AWS Custom Runtime and ReadyToRun for connect MySQL via Dapper Library
 
 ## Preparing
 
@@ -6,6 +6,10 @@
 2. Add config database in your Environment Variable as "DB_CONNECTION" like this
 ```
 DB_CONNECTION=Server=localhost;Port=3306;Uid=root;Pwd=1234;Database=lab;CharSet=utf8;ConvertZeroDateTime=True;
+```
+3. FOR AWS LAMBDA ENV - must add bundle directory
+```
+DOTNET_BUNDLE_EXTRACT_BASE_DIR=/tmp/
 ```
 
 ## Command for run
