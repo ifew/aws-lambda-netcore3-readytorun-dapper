@@ -3,13 +3,27 @@
 ## Preparing
 
 1. Import Database from database.sql
+
 2. Add config database in your Environment Variable as "DB_CONNECTION" like this
-```
+
+```bash
 DB_CONNECTION=Server=localhost;Port=3306;Uid=root;Pwd=1234;Database=lab;CharSet=utf8;ConvertZeroDateTime=True;
 ```
+
 3. FOR AWS LAMBDA ENV - must add bundle directory
-```
+
+```bash
 DOTNET_BUNDLE_EXTRACT_BASE_DIR=/tmp/
+
+## Command for build
+
+```bash
+sh build_linux.sh
+
+## Command for upload to aws s3
+
+```bash
+aws s3 cp package.zip s3://[Foldername] [--profile AWS-PROFILE-NAME]
 ```
 
 ## Command for run
