@@ -1,4 +1,4 @@
-# Example C# .NET Core 3.0.100 with AWS Custom Runtime and ReadyToRun for connect MySQL via Dapper Library
+# Example C# .NET Core 3.0.100 with ReadyToRun for connect MySQL via Dapper Library
 
 ## Preparing
 
