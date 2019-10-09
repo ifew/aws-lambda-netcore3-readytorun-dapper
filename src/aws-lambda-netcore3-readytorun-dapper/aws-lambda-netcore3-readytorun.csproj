@@ -11,15 +11,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Amazon.Lambda.RuntimeSupport" Version="1.0.0" />
+    <PackageReference Include="LambdaNative" Version="1.0.0" />
     <PackageReference Include="Amazon.Lambda.Core" Version="1.1.0" />
     <PackageReference Include="Amazon.Lambda.Serialization.Json" Version="1.5.0" />
 
     <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="3.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="3.0.0" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.0.0" />
     <PackageReference Include="Dapper" Version="2.0.4" />
-    <PackageReference Include="System.Data.SqlClient" Version="4.7.0" />
     <PackageReference Include="MySql.Data" Version="8.0.17" />
   </ItemGroup>
 </Project>
